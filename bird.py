@@ -23,9 +23,11 @@ from lasagne import init
 from lasagne import objectives
 from lasagne import updates
 from lasagne import regularization
+train_path = 'dataset/train/src/'
 
-print "...DONE!"
+test_path = 'dataset/val/src/'
 
+classes = [c for c in sorted(os.listdir(train_path))]
 
 RANDOM_SEED = 1337
 RANDOM = np.random.RandomState(RANDOM_SEED)
